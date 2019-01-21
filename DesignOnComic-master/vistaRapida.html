@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OnComics</title>
+
+    <!-- css mio -->
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="comic.css">
+    <link rel="stylesheet" href="vista.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="iconoCarga.css">
+    <link rel="stylesheet" href="carrousel.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="imagenes/favicon.png" type="image/x-icon">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+    <!-- bootstrap js -->
+    <script src="bootstrap.js"></script>
+
+    <!-- iconos  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+    <!-- jquery ui js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+
+    <!-- jquery ui css -->
+    <link rel="stylesheet" href="jquery-ui.css">
+
+    <!-- flickity css -->
+    <link rel="stylesheet" href="flickity.css">
+
+    <!-- flickity js -->
+    <script src="https://npmcdn.com/flickity@2.1.2/dist/flickity.pkgd.js"></script>
+
+    <!-- mi javascript -->
+    <script src="myjavasrc.js"></script>
+    <script src="carrousel.js"></script>
+
+    <!-- google font css -->
+    <link rel="stylesheet" href="font.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+</head>
+
+
+<body>
+    <div id="contenedor_carga">
+        <div id="carga">
+            <img src="imagenes/batman.gif" alt="batman">
+            <div style="font-weight: bold; font-size: 20px; text-align: center; width: 350px;">CARGANDO...</div>
+        </div>
+    </div>
+
+    <div id="main">
+        <!-- <div class="social">
+            <ul class="socialLista">
+                <li><a href="http://www.facebook.com" target="_blank" class="icon-facebook2"></a></li>
+                <li><a href="http://www.twitter.com" target="_blank" class="icon-twitter"></a></li>
+                <li><a href="http://www." class="icon-google-plus"></a></li>
+                <li><a href="http://www." class="icon-instagram"></a></li>
+            </ul>
+        </div> -->
+        <!-- <div id="header">
+            <div class="headerCes">
+                <button class="btn btn-outline-success"><i class="fas fa-user"></i> Login</button>
+                <button class="btn btn-outline-success"><i class="fas fa-shopping-cart"></i> Cesta</button>
+            </div>
+        </div> -->
+        <div id="header" class="bg-dark">
+            <nav class="navbar navbar-expand-md navbar-light bg-dark">
+                <a class="navbar-brand" href="index.html">ONCOMICS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">COMICS <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                GÉNERO
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Bélico</a>
+                                <a class="dropdown-item" href="#">Ciencia Ficción</a>
+                                <a class="dropdown-item" href="#">Erótico</a>
+                                <a class="dropdown-item" href="#">Fantasía y Aventura</a>
+                                <a class="dropdown-item" href="#">Humor</a>
+                                <a class="dropdown-item" href="#">Infantil</a>
+                                <a class="dropdown-item" href="#">Serie Negra o Detectivesca</a>
+                                <a class="dropdown-item" href="#">Sobrenatural y Paranormal</a>
+                                <a class="dropdown-item" href="#">SuperHéroes</a>
+                                <!-- <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a> -->
+                            </div>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 ui-widget" type="search" id="tags" placeholder="Búsqueda"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-1 my-sm-0" type="submit">Búsqueda</button>
+                    </form>
+                </div>
+            </nav>
+
+        </div>
+
+        <div id="contenidoVista">
+            <div id="vista">
+                <div class="portadaVista">
+                    <img src="imagenes/destacado2.jpg" height="400px" style="border: 5px outset black;" alt="">
+                </div>
+                <div class="todoVista">
+                    <div class="portadaTitulo"> DARED EVIL #12</div>
+                    <div class="portadaDescripcion">Este volumen comienza con la conclusión de una saga en la que
+                        Daredevil y la Viuda Negra se enfrentan al singular Hombre Púrpura y a Electro, el gran amo de
+                        la electricidad. Justo a continuación, tiene lugar el retorno de uno de los villanos más
+                        característicos de esta colección, se trata de Mr. Miedo, una entidad que se resiste a
+                        desaparecer de la vida del Hombre Sin Miedo. En esta historia, además, se mostrarán detalles
+                        del origen de la Viuda Negra
+                    </div>
+                    <div class="preciV">3,20 €</div>
+                    <div class="cestV">AÑADIR CESTA</div>
+                </div>
+                
+            </div>
+
+
+            <div id="interes">
+                <div class="accordion">
+                    <dl>
+                        <dt>
+                            <a href="#accordion1" aria-expanded="true" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger is-collapsed is-expanded">
+                                DESTACADOS</a>
+                        </dt>
+                        <dd class="accordion-content accordionItem is-expanded animateIn" id="accordion1" aria-hidden="false">
+                            <div style="overflow-y:hidden">
+                                <div>
+                                    <div class="carousel" data-flickity='{ "wrapAround": true , "freeScroll": true , "groupCells" : 3 , "pageDots": false, "percentPosition": false}'>
+                                        <div class="carousel-cell destacados1">
+                                            <div class="portada1">
+                                                <div class="vistaCuadrado1">VISTA RÁPIDA</div>
+                                            </div>
+                                            <div class="titulo1">
+                                            </div>
+                                            <div class="precio1">
+                                            </div>
+                                            <div class="cesta1">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados2">
+                                            <div class="portada2">
+                                                <div class="vistaCuadrado2">VISTA RÁPIDA</div>
+                                            </div>
+
+                                            <div class="titulo2">
+                                            </div>
+                                            <div class="precio2">
+                                            </div>
+                                            <div class="cesta2">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados3">
+                                            <div class="portada3">
+                                            </div>
+                                            <div class="titulo3">
+                                            </div>
+                                            <div class="precio3">
+                                            </div>
+                                            <div class="cesta3">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados4">
+                                            <div class="portada4">
+                                            </div>
+                                            <div class="titulo4">
+                                            </div>
+                                            <div class="precio4">
+                                            </div>
+                                            <div class="cesta4">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados5">
+                                            <div class="portada5">
+                                            </div>
+                                            <div class="titulo5">
+                                            </div>
+                                            <div class="precio5">
+                                            </div>
+                                            <div class="cesta5">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados6">
+                                            <div class="portada6">
+                                            </div>
+                                            <div class="titulo6">
+                                            </div>
+                                            <div class="precio6">
+                                            </div>
+                                            <div class="cesta6">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados7">
+                                            <div class="portada7">
+                                            </div>
+                                            <div class="titulo7">
+                                            </div>
+                                            <div class="precio7">
+                                            </div>
+                                            <div class="cesta7">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados8">
+                                            <div class="portada8">
+                                            </div>
+                                            <div class="titulo8">
+                                            </div>
+                                            <div class="precio8">
+                                            </div>
+                                            <div class="cesta8">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="dialog" title="El comic blabla">
+            <p>Ha sido añadido al carrito.</p>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer" class="bg-dark">
+            <div class="contiene">
+                <!-- <div class="about">
+                    <h2>Sobre nosotros</h2>
+                        <div class="myframegmap">
+
+                        </div>
+                </div> -->
+
+
+
+                <div class="home">
+                    <div class="footertitle">OnComics</div>
+                    <div class="iconos">
+                        <i class="fa fa-home"></i>
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-map-marker"></i>
+                        <i class="fa fa-briefcase"></i>
+                        <i class="fa fa-question-circle"></i>
+                    </div>
+
+                    <div class="enlaces">
+                        <a href="#"> Home</a>
+                        <a href="#"> About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#"> Services</a>
+                        <a href="#">Term & Conditions</a>
+                    </div>
+                </div>
+
+
+                <div class="contact">
+                    <div class="footertitle">Contáctanos</div>
+                    <div class="iconos">
+                        <i class="fa fa-phone"></i>
+                        <i class="fa fa-envelope"></i>
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+
+                    <div class="enlaces">
+                        <a href="tel:0123456789"> +0123456789</a>
+                        <a href="mailto:abc@abc.com"> abc@abc.com</a>
+                        <a href="#"> Velencia</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OnComics</title>
+
+    <!-- css mio -->
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="comic.css">
+    <link rel="stylesheet" href="iconoCarga.css">
+    <link rel="stylesheet" href="botonesSocial.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="carrousel.css">
+
+
+    <!-- jquery.min.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- bootstrap js -->
+    <script src="bootstrap.js"></script>
+
+    <!-- libreria font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+    <!-- jquery-ui.min.js  -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+
+    <!-- jquery.ui.touch-punch.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- jquery css  -->
+    <link rel="stylesheet" href="jquery-ui.css">
+
+
+    <!-- google font css -->
+    <link rel="stylesheet" href="font.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <!-- flickity css -->
+    <link rel="stylesheet" href="flickity.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css"> -->
+
+    <!-- flickity js -->
+    <script src="https://npmcdn.com/flickity@2.1.2/dist/flickity.pkgd.js"></script>
+
+    <!-- mi javascript -->
+    <script src="myjavasrc.js"></script>
+    <script src="carrousel.js"></script>
+
+
+
+    <!-- jcarrousel js -->
+    <!-- <script src="carrouselJs.js"></script>
+    <script src="jquery.jcarousel.min.js"></script> -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+
+</head>
+
+
+<body>
+    <div id="contenedor_carga">
+        <div id="carga">
+            <img src="imagenes/batman.gif" alt="batman" width="180%">
+            <div style="font-weight: bold; font-size: 20px; text-align: center; width: 350px;">CARGANDO...</div>
+        </div>
+    </div>
+
+    <div id="main">
+        <!-- <div class="social">
+            <ul class="socialLista">
+                <li><a href="http://www.facebook.com" target="_blank" class="icon-facebook2"></a></li>
+                <li><a href="http://www.twitter.com" target="_blank" class="icon-twitter"></a></li>
+                <li><a href="http://www." class="icon-google-plus"></a></li>
+                <li><a href="http://www." class="icon-instagram"></a></li>
+            </ul>
+        </div> -->
+
+
+        <!-- <div id="header">
+            <div class="headerCes">
+                <button class="btn btn-outline-success"><i class="fas fa-user"></i> Login</button>
+                <button class="btn btn-outline-success"><i class="fas fa-shopping-cart"></i> Cesta</button>
+            </div>
+        </div> -->
+
+        <div id="header" class="bg-dark">
+            <nav class="navbar navbar-expand-md navbar-light bg-dark">
+                <a class="navbar-brand" href="#">ONCOMICS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">COMICS <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                GÉNERO
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Bélico</a>
+                                <a class="dropdown-item" href="#">Ciencia Ficción</a>
+                                <a class="dropdown-item" href="#">Erótico</a>
+                                <a class="dropdown-item" href="#">Fantasía y Aventura</a>
+                                <a class="dropdown-item" href="#">Humor</a>
+                                <a class="dropdown-item" href="#">Infantil</a>
+                                <a class="dropdown-item" href="#">Serie Negra o Detectivesca</a>
+                                <a class="dropdown-item" href="#">Sobrenatural y Paranormal</a>
+                                <a class="dropdown-item" href="#">SuperHéroes</a>
+                                <!-- <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a> -->
+                            </div>
+                        </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2 ui-widget" type="search" id="tags" placeholder="Búsqueda"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success my-1 my-sm-0" type="submit">Búsqueda</button>
+                    </form>
+                </div>
+            </nav>
+
+        </div>
+
+        <div id="contenido">
+            <div id="carrousel">
+                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true , "autoPlay": 3510, "selectedAttraction": 0.01,"friction": 0.3}'>
+                    <div class="gallery-cell-principal entrada1">
+                        <img class="imagenCarrousel1" src="./imagenes/entrada1.jpg" alt="" width="94%">
+
+                    </div>
+                    <div class="gallery-cell-principal entrada2">
+                        <img class="imagenCarrousel1" src="./imagenes/entrada2.jpg" alt="" width="94%">
+                    </div>
+                    <div class="gallery-cell-principal entrada3">
+                        <img class="imagenCarrousel1" src="./imagenes/entrada3.jpg" alt="" width="94%">
+                    </div>
+                    <div class="gallery-cell-principal entrada4">
+                        <img class="imagenCarrousel1" src="./imagenes/entrada4.jpg" alt="" width="94%">
+                    </div>
+                    <div class="gallery-cell-principal entrada5">
+                        <img class="imagenCarrousel1" src="./imagenes/header3.jpg" alt="" width="94%">
+                    </div>
+                </div>
+            </div>
+
+
+            <section id="comic">
+                <div class="accordion">
+                    <dl>
+                        <dt>
+                            <a href="#accordion1" aria-expanded="true" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger is-collapsed is-expanded">
+                                DESTACADOS</a>
+                        </dt>
+                        <dd class="accordion-content accordionItem is-expanded animateIn" id="accordion1" aria-hidden="false">
+                            <div style="overflow-y:hidden">
+                                <div>
+                                    <div class="carousel" data-flickity='{ "wrapAround": true , "freeScroll": true , "groupCells" : 3 , "pageDots": false, "percentPosition": false}'>
+                                        <div class="carousel-cell destacados1">
+                                            <div class="portada1">
+                                                <div class="vistaCuadrado1">VISTA RÁPIDA</div>
+                                            </div>
+                                            <div class="titulo1">
+                                            </div>
+                                            <div class="precio1">
+                                            </div>
+                                            <div class="cesta1">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados2">
+                                            <div class="portada2">
+                                                <div class="vistaCuadrado2">VISTA RÁPIDA</div>
+                                            </div>
+
+                                            <div class="titulo2">
+                                            </div>
+                                            <div class="precio2">
+                                            </div>
+                                            <div class="cesta2">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados3">
+                                            <div class="portada3">
+                                            </div>
+                                            <div class="titulo3">
+                                            </div>
+                                            <div class="precio3">
+                                            </div>
+                                            <div class="cesta3">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados4">
+                                            <div class="portada4">
+                                            </div>
+                                            <div class="titulo4">
+                                            </div>
+                                            <div class="precio4">
+                                            </div>
+                                            <div class="cesta4">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados5">
+                                            <div class="portada5">
+                                            </div>
+                                            <div class="titulo5">
+                                            </div>
+                                            <div class="precio5">
+                                            </div>
+                                            <div class="cesta5">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados6">
+                                            <div class="portada6">
+                                            </div>
+                                            <div class="titulo6">
+                                            </div>
+                                            <div class="precio6">
+                                            </div>
+                                            <div class="cesta6">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados7">
+                                            <div class="portada7">
+                                            </div>
+                                            <div class="titulo7">
+                                            </div>
+                                            <div class="precio7">
+                                            </div>
+                                            <div class="cesta7">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell destacados8">
+                                            <div class="portada8">
+                                            </div>
+                                            <div class="titulo8">
+                                            </div>
+                                            <div class="precio8">
+                                            </div>
+                                            <div class="cesta8">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                        <dt>
+                            <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
+                                MÁS VENDIDOS</a>
+                        </dt>
+                        <dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+                            <div style="overflow-y:hidden">
+                                <div class="carousel center" data-flickity='{"pageDots": false, "percentPosition": false , "contain": true, "prevNextButtons": false, "cellAlign": "left"}'>
+                                    <div class="carousel-cell">
+                                        <div class="portadaV1">
+                                        </div>
+                                        <div class="tituloV1">
+                                        </div>
+                                        <div class="precio1">
+                                        </div>
+                                        <div class="cesta1">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <div class="portadaV2">
+                                        </div>
+                                        <div class="tituloV2">
+                                        </div>
+                                        <div class="precio2">
+                                        </div>
+                                        <div class="cesta2">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <div class="portadaV3">
+                                        </div>
+                                        <div class="tituloV3">
+                                        </div>
+                                        <div class="precio3">
+                                        </div>
+                                        <div class="cesta3">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <div class="portadaV4">
+                                        </div>
+                                        <div class="tituloV4">
+                                        </div>
+                                        <div class="precio4">
+                                        </div>
+                                        <div class="cesta4">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-cell">
+                                        <div class="portadaV5">
+                                        </div>
+                                        <div class="tituloV5">
+                                        </div>
+                                        <div class="precio5">
+                                        </div>
+                                        <div class="cesta5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                        <dt>
+                            <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+                                DESCUENTOS
+                            </a>
+                        </dt>
+                        <dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+                            <div style="overflow-y:hidden">
+                                <div>
+                                    <div class="carousel" data-flickity='{ "wrapAround": true , "freeScroll": true , "groupCells" : 3 , "pageDots": false, "percentPosition": false}'>
+                                        <div class="carousel-cell2">
+                                            <div class="portada1">
+                                            </div>
+                                            <div class="titulo1">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta1">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell2">
+                                            <div class="portada2">
+                                            </div>
+                                            <div class="titulo2">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta2">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell2">
+                                            <div class="portada3">
+                                            </div>
+                                            <div class="titulo3">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta3">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell2">
+                                            <div class="portada4">
+                                            </div>
+                                            <div class="titulo4">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta4">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell2">
+                                            <div class="portada5">
+                                            </div>
+                                            <div class="titulo5">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta5">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell2">
+                                            <div class="portada6">
+                                            </div>
+                                            <div class="titulo6">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta6">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell2">
+                                            <div class="portada7">
+                                            </div>
+                                            <div class="titulo7">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta7">
+                                            </div>
+                                        </div>
+                                        <div class="carousel-cell2">
+                                            <div class="portada8">
+                                            </div>
+                                            <div class="titulo8">
+                                            </div>
+                                            <div class="pp">
+                                                <div class="precio1N">
+                                                </div>
+                                                <div class="precio1">
+                                                </div>
+                                            </div>
+                                            <div class="cesta8">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+
+
+
+            <section id="informacion">
+                <div>
+                    <div id="tabs">
+                        <ul>
+                            <li><a href="#tabs-1">Nunc tincidunt</a></li>
+                            <li><a href="#tabs-2">Proin dolor</a></li>
+                            <li><a href="#tabs-3">Aenean lacinia</a></li>
+                        </ul>
+                        <div id="tabs-1">
+                            <h2>Content heading 1</h2>
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu.
+                                Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam
+                                aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper
+                                leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales
+                                tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede
+                                varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc
+                                tristique tempus lectus.</p>
+                        </div>
+                        <div id="tabs-2">
+                            <h2>Content heading 2</h2>
+                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra
+                                massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus
+                                malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet
+                                fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros
+                                vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc.
+                                Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque
+                                convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod
+                                felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+                        </div>
+                        <div id="tabs-3">
+                            <h2>Content heading 3</h2>
+                            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate,
+                                pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.
+                                Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia
+                                nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo
+                                pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim,
+                                pretium nec, feugiat nec, luctus a, lacus.</p>
+                            <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac
+                                lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing
+                                velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula
+                                faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed
+                                nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac,
+                                tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo.
+                                Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit
+                                hendrerit.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div id="dialog" title="El comic blabla">
+                <p>Ha sido añadido al carrito.</p>
+            </div>
+
+
+        </div>
+
+        <!-- Footer -->
+        <div id="footer" class="bg-dark">
+            <div class="contiene">
+                <!-- <div class="about">
+                    <h2>Sobre nosotros</h2>
+                        <div class="myframegmap">
+
+                        </div>
+                </div> -->
+
+
+
+                <div class="home">
+                    <div class="footertitle">OnComics</div>
+                    <div class="iconos">
+                        <i class="fa fa-home"></i>
+                        <i class="fa fa-user"></i>
+                        <i class="fa fa-map-marker"></i>
+                        <i class="fa fa-briefcase"></i>
+                        <i class="fa fa-question-circle"></i>
+                    </div>
+
+                    <div class="enlaces">
+                        <a href="#"> Home</a>
+                        <a href="#"> About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#"> Services</a>
+                        <a href="#">Term & Conditions</a>
+                    </div>
+                </div>
+
+
+                <div class="contact">
+                    <div class="footertitle">Contáctanos</div>
+                    <div class="iconos">
+                        <i class="fa fa-phone"></i>
+                        <i class="fa fa-envelope"></i>
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+
+                    <div class="enlaces">
+                        <a href="tel:0123456789"> +0123456789</a>
+                        <a href="mailto:abc@abc.com"> abc@abc.com</a>
+                        <a href="#"> Velencia</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="footer2">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p><strong>copyright © 2013-2018 All right reserved.</strong></p>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+</body>
+
+</html>
